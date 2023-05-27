@@ -7,6 +7,7 @@ set number
 set relativenumber
 set termguicolors
 set shiftwidth=2
+set ignorecase
 
 call plug#begin('~/.config/nvim/plugged')
 
@@ -40,8 +41,6 @@ call plug#begin('~/.config/nvim/plugged')
 
 call plug#end()
 
-" Personal map
-
 " Onehalf configuration
 colorscheme onehalfdark
 
@@ -61,6 +60,12 @@ nnoremap <leader>2 :bprevious<CR>
 nnoremap <leader>3 :bnext<CR>
 nnoremap <leader>4 :blast<CR>
 
+" Personal map
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+
 " Nerdtree Configuration
 let NERDTreeQuitOnOpen=0
 nnoremap <C-n> :NERDTree<CR>
@@ -73,7 +78,7 @@ vnoremap <space>/ :Commentary<CR>
 " LSP configuration
 
 lua << EOF
-
+ 
   -- Setup language servers.
   local lspconfig = require('lspconfig')
   lspconfig.tsserver.setup{} --javascript and typescript
