@@ -63,12 +63,6 @@ nnoremap <leader>2 :bprevious<CR>
 nnoremap <leader>3 :bnext<CR>
 nnoremap <leader>4 :blast<CR>
 
-" Personal map
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-h> <Left>
-inoremap <C-l> <Right>
-
 " Nerdtree Configuration
 let NERDTreeQuitOnOpen=0
 nnoremap <C-n> :NERDTree<CR>
