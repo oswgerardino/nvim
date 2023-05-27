@@ -39,6 +39,9 @@ call plug#begin('~/.config/nvim/plugged')
   " Nerdtree
   Plug 'preservim/nerdtree'
 
+  " vim transparent
+  Plug 'tribela/vim-transparent'
+
 call plug#end()
 
 " Onehalf configuration
